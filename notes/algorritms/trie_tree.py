@@ -3,94 +3,84 @@ class TreeNode(object):
         self.value = value
         self.firstChild = firstChild
         self.nextSibling = nextSibling
-        self.isLeaf = isLeaf
-
-    def printTree(self):
-        from collections import deque
-        class StackElement(object):
-            def __init__(self, node, level):
-                self.node = node
-                self.level = level
-        
-        if self == None:
-            return
-        q = deque()
-        currLevel = 0
-        q.append(StackElement(self, 0))
-        while len(q) > 0:
-            currElement = q.popleft()
-            if currElement.level > currLevel:
-                currLevel = currElement.level
-                print()
-            print(currElement.node.value, end=' ')
-            currChild = currElement.node.firstChild
-            currLevel = currElement.level
-            while currChild != None:
-                q.append(StackElement(currChild, currLevel + 1))
-                currChild = currChild.nextSibling
-        print()
-
-    def findChildren(self, char):
-        if self == None:
-            return None
-        currChild = self.firstChild
-        while currChild != None:
-            if currChild.value == char:
-                return currChild
-            currChild = currChild.nextSibling
+        self.isLeaf = isLeaf # important!
+    
+    def findChild(self, c):
+        pos = self.firstChild
+        while pos != None:
+            if pos.value == c:
+                return pos
+            pos = pos.nextSibling
         return None
-
-    def insertChild(self, char):
-        if self == None:
-            return None
-        newNode = TreeNode(value=char)
-        if self.firstChild == None:
+    
+    def insertChild(self, c):
+        newNode = TreeNode(c)
+        pos = self.firstChild
+        if pos == None:
             self.firstChild = newNode
-        else:
-            currNode = self.firstChild
-            while currNode.nextSibling != None:
-                currNode = currNode.nextSibling
-            currNode.nextSibling = newNode
-        return newNode   
+            return newNode
+        while pos.nextSibling != None:
+            pos = pos.nextSibling
+        pos.nextSibling = newNode
+        return newNode
+
+    def children(self):
+        res = []
+        pos = self.firstChild
+        while pos != None:
+            res.append(pos)
+            pos = pos.nextSibling
+        return res
 
 class TrieTree(object):
     def __init__(self):
         self.root = TreeNode()
-
-    def printTree(self):
-        TreeNode.printTree(self.root)
-
+    
     def insert(self, word):
-        currParent = self.root
-        for char in word:
-            nextParent = TreeNode.findChildren(currParent, char)
-            if nextParent == None:
-                currParent = TreeNode.insertChild(currParent, char)
+        def step(root, idx):
+            if idx == len(word):
+                root.isLeaf = True
+                return
+            next = root.findChild(word[idx])
+            if next == None:
+                next = root.insertChild(word[idx])
+            step(next, idx + 1)
+        step(self.root, 0)
+
+    def search(self, word):
+        def step(root, idx):
+            if idx == len(word):
+                if root.isLeaf:
+                    return True
+                else:
+                    return False
+            if word[idx] != '.':
+                next = root.findChild(word[idx])
+                if next == None:
+                    return False
+                return step(next, idx + 1)
             else:
-                currParent = nextParent
-        currParent.isLeaf = True
+                res = False
+                for child in root.children():
+                    res |= step(child, idx + 1)
+                return res
+        return step(self.root, 0)
     
-    def find(self, word):
-        currParent = self.root
-        for char in word:
-            nextParent = TreeNode.findChildren(currParent, char)
-            if nextParent == None:
-                return False
-            currParent = nextParent
-        return currParent.isLeaf
-    
-    def delete(self, word):
-        # TODO
-        pass
-
-
-
-t = TrieTree()
-t.insert('haha')
-t.insert('hello')
-t.insert('no')
-t.printTree()
-print(t.find('hell'))
-print(t.find('hello'))
-t.insert('hell')
-print(t.find('hell'))
+tree = TrieTree()
+tree.insert("at")
+tree.insert("and")
+tree.insert("an")
+tree.insert("add")
+print(tree.search("a")) # f
+print(tree.search(".at")) # f
+tree.insert("bat")
+print(tree.search(".at")) # t
+print(tree.search("an.")) # t
+print(tree.search("a.d.")) # f
+print(tree.search("b.")) # f
+print(tree.search("a.d")) # t
+print(tree.search(".")) # f
+print(tree.search("bat")) # t
+tree.insert("a")
+print(tree.search("a")) # t
+print(tree.search(".")) # t

@@ -1,48 +1,86 @@
-# Trie Tree
+class TreeNode(object):
+    def __init__(self, value=None, firstChild=None, nextSibling=None, isLeaf=False):
+        self.value = value
+        self.firstChild = firstChild
+        self.nextSibling = nextSibling
+        self.isLeaf = isLeaf
+    
+    def findChild(self, c):
+        pos = self.firstChild
+        while pos != None:
+            if pos.value == c:
+                return pos
+            pos = pos.nextSibling
+        return None
+    
+    def insertChild(self, c):
+        newNode = TreeNode(c)
+        pos = self.firstChild
+        if pos == None:
+            self.firstChild = newNode
+            return newNode
+        while pos.nextSibling != None:
+            pos = pos.nextSibling
+        pos.nextSibling = newNode
+        return newNode
+
+    def children(self):
+        res = []
+        pos = self.firstChild
+        while pos != None:
+            res.append(pos)
+            pos = pos.nextSibling
+        return res
+
 class WordDictionary(object):
-    class TreeNode():
-        def __init__(self, value=None, isLeaf=False, children=[]):
-            self.value = value
-            self.isLeaf = isLeaf
-            self.children = children
-        
-        def findChild(self, char):
-            for child in self.children:
-                if child.value == char:
-                    return child
-            return None
-
     def __init__(self):
-        self.root = self.TreeNode()
-
+        self.root = TreeNode()
+    
     def addWord(self, word):
-        """
-        :type word: str
-        :rtype: None
-        """
-        currParent = self.root
-        for char in word:
-            nextParent = currParent.findChild(char)
-            if nextParent == None:
-                newNode = self.TreeNode(value=char)
-                currParent.children.append(newNode)
-                currParent = newNode
-            else:
-                currParent = nextParent
-        currParent.isLeaf = True
-
+        def step(root, idx):
+            if idx == len(word):
+                root.isLeaf = True
+                return
+            next = root.findChild(word[idx])
+            if next == None:
+                next = root.insertChild(word[idx])
+            step(next, idx + 1)
+        step(self.root, 0)
 
     def search(self, word):
-        """
-        :type word: str
-        :rtype: bool
-        """
-        def dfs(char, node):
-            pass
-        currParent = self.root
-        for char in word:
-            nextParent = currParent.findChild(char)
-            if nextParent == None:
-                return False
-            currParent = nextParent
-        return currParent.isLeaf
+        def step(root, idx):
+            if idx == len(word):
+                if root.isLeaf:
+                    return True
+                else:
+                    return False
+            if word[idx] != '.':
+                next = root.findChild(word[idx])
+                if next == None:
+                    return False
+                return step(next, idx + 1)
+            else:
+                res = False
+                for child in root.children():
+                    res |= step(child, idx + 1)
+                return res
+        return step(self.root, 0)
+    
+tree = WordDictionary()
+tree.addWord("at")
+tree.addWord("and")
+tree.addWord("an")
+tree.addWord("add")
+print(tree.search("a")) # f
+print(tree.search(".at")) # f
+tree.addWord("bat")
+print(tree.search(".at")) # t
+print(tree.search("an.")) # t
+print(tree.search("a.d.")) # f
+print(tree.search("b.")) # f
+print(tree.search("a.d")) # t
+print(tree.search(".")) # f
+print(tree.search("bat")) # t
+tree.addWord("a")
+print(tree.search("a")) # t
+print(tree.search(".")) # t

@@ -15,12 +15,13 @@
 
 ### Graphs & Trees
 
-- <mark>0211[M]</mark> Design Add And Search  Words Data Structure (trie tree)
+- **0211[M]** Design Add And Search  Words Data Structure (trie tree)
 - <mark>0126[H]</mark> Word Ladder ii (BFS / Dijkstra)
 - 0106[M] Construct Binary Tree From Inorder And Postorder Traversal
 - 0116[M] Populating Next Right Pointers in Each Node
 - 0101[E] Symmetric Tree
 - **0130[M]** Surrounded Regions (DFS / BFS)
+- 0508[M] Most Frequent Subtree Sum (DFS)
 
 ### Sorting Algorithms
 
@@ -69,6 +70,7 @@
 - 0216[M] Combination Sum III 
 - **0201[M]** Bitwise AND of Numbers Range (common prefix / Brian Kernighan)
 - 0136[E] Single Number (exclusive or `^`)
+- 0461[E] Hamming Distance (exclusive or `^`)
 
 ### Math Problems
 
