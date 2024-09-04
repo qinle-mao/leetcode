@@ -17,7 +17,7 @@
 
 - **0211[M]** Design Add And Search  Words Data Structure (trie tree)
 - <mark>0126[H]</mark> Word Ladder ii (BFS / Dijkstra)
-- 0106[M] Construct Binary Tree From Inorder And Postorder Traversal
+- 0106[M] Construct Binary Tree From In-Order And Post-Order Traversal
 - 0116[M] Populating Next Right Pointers in Each Node
 - 0101[E] Symmetric Tree
 - **0130[M]** Surrounded Regions (DFS / BFS)
@@ -36,6 +36,7 @@
 - 0078[M] Subsets
 - <mark>0079[M]</mark> Word Search
 - **0090[M]** Subsets II (pruning condition)
+- 0046[M] Permutations
 
 ### Dynamic Programming
 
