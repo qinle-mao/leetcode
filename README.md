@@ -12,6 +12,7 @@
 - 2201[M] Count Artifacts That Can Be Extracted (simulation)
 - <mark>0134[M]</mark> Gas Station
 - 0344[E] Reversing String
+- **0149[H]** Max Points on a Line (simulation)
 
 ### Graphs & Trees
 
@@ -37,6 +38,7 @@
 - <mark>0079[M]</mark> Word Search
 - **0090[M]** Subsets II (pruning condition)
 - 0046[M] Permutations
+- 0282[H] Expression Add Operators
 
 ### Dynamic Programming
 
@@ -59,6 +61,7 @@
 - 0027[E] Remove Element (slow-fast pointers)
 - 2264[E] Largest 3-Same-Digit Number in String (slow-fast pointers)
 - 0088[E] Merge Sorted Array
+- 0209[M] Minimum Size Subarray Sum
 
 ### Sliding Windows
 
