@@ -21,3 +21,13 @@ from functools import reduce
 print(reduce(lambda x, y : x * y, nums)) # 20 (1*2*3*4*5)
 print(list(map(lambda x : x ** 2, nums))) # [1, 4, 9, 16, 25]
 print(list(filter(lambda x : x % 2 == 0, nums))) # [2, 4]
+
+# minheap (maxheap not supported)
+import heapq
+heap = []
+heapq.heappush(heap, 5)
+heapq.heappush(heap, 3)
+heapq.heappush(heap, 1)
+print(heap) # [1, 5, 3]
+heapq.heappop(heap)
+print(heap) # [3, 5]

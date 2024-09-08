@@ -23,6 +23,7 @@
 - 0101[E] Symmetric Tree
 - **0130[M]** Surrounded Regions (DFS / BFS)
 - 0508[M] Most Frequent Subtree Sum (DFS)
+- **0218[H]** The Skyline Problem (max heap / segment tree)
 
 ### Sorting Algorithms
 
@@ -48,6 +49,7 @@
 - <mark>0097[M]</mark> Interleaving String
 - **2167[H]** Minimum Time to Remove All Cars Containing Illegal Goods (sum of prefixes)
 - **0044[H]** Wildcard Matching
+- 0313[M] Super Ugly Number
 
 ### Divide & Conquer
 
