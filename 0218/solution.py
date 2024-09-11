@@ -10,7 +10,7 @@ class Solution(object):
         for building in buildings:
             boundaries.append(building[0])
             boundaries.append(building[1])
-            boundaries.sort()
+        boundaries.sort()
         res, heap = [], []
         n, pos = len(buildings), 0
         for boundary in boundaries:
@@ -57,7 +57,7 @@ class Solution(object):
                 res.append([pos - 1, currHeight])
             prevHeight = currHeight
         return res
-    
+
 buildings = [[2,9,10],[3,7,15],[5,12,12],[15,20,10],[19,24,8]]
 # buildings = [[0,2,3],[2,5,3]]
 # buildings = [[0,2147483647,2147483647]]

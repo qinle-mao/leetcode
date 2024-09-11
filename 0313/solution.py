@@ -5,21 +5,18 @@ class Solution(object):
         :type primes: List[int]
         :rtype: int
         """
-        uglyNums = [1, primes[0]]
-        pos0, pos1, pos2 = 1, 1, 0
-        while len(uglyNums) < n:
-            newNum = uglyNums[pos0] * primes[pos2]
-            if pos1 < len(primes) and primes[pos1] < newNum:
-                uglyNums.append(primes[pos1])
-                pos1 += 1
-            else:
-                uglyNums.append(newNum)
-                if pos2 < len(primes) and primes[pos2+1] * uglyNums[pos0] < primes[pos2] * uglyNums[pos0+1]:
-                    pos2 += 1
-                else:
-                    pos0 += 1
-        print(uglyNums)
-        return uglyNums[n-1]
+        m = len(primes)
+        uglyNums = [0] * (n + 1)
+        pointers, nums = [0] * m, [1] * m
+        for i in range(1, n + 1):
+            minNum = min(nums)
+            uglyNums[i] = minNum
+            for j in range(m):
+                if nums[j] == minNum:
+                    pointers[j] += 1
+                    nums[j] = uglyNums[pointers[j]] * primes[j]
+        return uglyNums[n]
+        
 
 # n, primes = 12, [2, 7, 13, 19]
 # n, primes = 10, [2, 5, 7, 11, 13, 17, 23 ,29, 43, 53]

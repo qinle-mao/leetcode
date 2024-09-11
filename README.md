@@ -13,6 +13,7 @@
 - <mark>0134[M]</mark> Gas Station
 - 0344[E] Reversing String
 - **0149[H]** Max Points on a Line (simulation)
+- **0218[H]** The Skyline Problem (scanning line)
 
 ### Graphs & Trees
 
@@ -24,6 +25,7 @@
 - **0130[M]** Surrounded Regions (DFS / BFS)
 - 0508[M] Most Frequent Subtree Sum (DFS)
 - **0218[H]** The Skyline Problem (max heap / segment tree)
+- 0199[M] Binary Tree Right Side View (level-order traversal)
 
 ### Sorting Algorithms
 
@@ -49,7 +51,8 @@
 - <mark>0097[M]</mark> Interleaving String
 - **2167[H]** Minimum Time to Remove All Cars Containing Illegal Goods (sum of prefixes)
 - **0044[H]** Wildcard Matching
-- 0313[M] Super Ugly Number
+- **0313[M]** Super Ugly Number
+- **0241[M]** Different Ways to Add Parentheses (break into left & right parts)
 
 ### Divide & Conquer
 
@@ -77,6 +80,7 @@
 - **0201[M]** Bitwise AND of Numbers Range (common prefix / Brian Kernighan)
 - 0136[E] Single Number (exclusive or `^`)
 - 0461[E] Hamming Distance (exclusive or `^`)
+- 0278[E] First Bad Version
 
 ### Math Problems
 
