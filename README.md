@@ -13,7 +13,8 @@
 - <mark>0134[M]</mark> Gas Station
 - 0344[E] Reversing String
 - **0149[H]** Max Points on a Line (simulation)
-- **0218[H]** The Skyline Problem (scanning line)
+- 0447[M] Number of Boomerangs (hash map)
+- 0495[E] Teemo Attacking (simulation)
 
 ### Graphs & Trees
 
@@ -57,6 +58,10 @@
 ### Divide & Conquer
 
 - **0395[M]** Longest Substring with At Least K Repeating Characters
+
+### Greedy Algorithm
+
+- <mark>0330[H]</mark> Patching Array
 
 ### Double Pointers
 

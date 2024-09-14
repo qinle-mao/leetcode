@@ -31,3 +31,4 @@ heapq.heappush(heap, 1)
 print(heap) # [1, 5, 3]
 heapq.heappop(heap)
 print(heap) # [3, 5]
+
