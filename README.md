@@ -15,6 +15,8 @@
 - **0149[H]** Max Points on a Line (simulation)
 - 0447[M] Number of Boomerangs (hash map)
 - 0495[E] Teemo Attacking (simulation)
+- <mark>0430[M]</mark> Flatten a Multilevel Doubly Linked List (DFS)
+- 0459[E] Repeated Substring Pattern
 
 ### Graphs & Trees
 
@@ -72,6 +74,7 @@
 - 2264[E] Largest 3-Same-Digit Number in String (slow-fast pointers)
 - 0088[E] Merge Sorted Array
 - 0209[M] Minimum Size Subarray Sum
+- 0443[M] String Compression
 
 ### Sliding Windows
 
