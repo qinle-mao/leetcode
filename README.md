@@ -17,6 +17,7 @@
 - 0495[E] Teemo Attacking (simulation)
 - <mark>0430[M]</mark> Flatten a Multilevel Doubly Linked List (DFS)
 - 0459[E] Repeated Substring Pattern
+- 0480[H] Sliding Window Median (binary search)
 
 ### Graphs & Trees
 
@@ -29,6 +30,7 @@
 - 0508[M] Most Frequent Subtree Sum (DFS)
 - **0218[H]** The Skyline Problem (max heap / segment tree)
 - 0199[M] Binary Tree Right Side View (level-order traversal)
+- 0437[M] Path Sum III (DFS + flag)
 
 ### Sorting Algorithms
 
@@ -93,7 +95,3 @@
 ### Math Problems
 
 - <mark>0233[H]</mark> Number of Digit 1 
-
-### Pandas & SQL
-
-- 0178[M] Rank Scores
