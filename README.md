@@ -21,7 +21,7 @@
 
 ### Graphs & Trees
 
-- **0211[M]** Design Add And Search  Words Data Structure (trie tree)
+- **0211[M]** Design Add And Search  Words Data Structure (trie)
 - <mark>0126[H]</mark> Word Ladder ii (BFS / Dijkstra)
 - 0106[M] Construct Binary Tree From In-Order And Post-Order Traversal
 - 0116[M] Populating Next Right Pointers in Each Node
@@ -58,6 +58,7 @@
 - **0044[H]** Wildcard Matching
 - **0313[M]** Super Ugly Number
 - **0241[M]** Different Ways to Add Parentheses (break into left & right parts)
+- 0650[M] 2 Keys Keyboard
 
 ### Divide & Conquer
 
@@ -77,10 +78,12 @@
 - 0088[E] Merge Sorted Array
 - 0209[M] Minimum Size Subarray Sum
 - 0443[M] String Compression
+- **0455[E]** Assign Cookies
+- **0524[M]** Longest Word in Dictionary through Deleting
 
 ### Sliding Windows
 
-- <mark>0220[H]</mark> Contains Duplicates III (+ sorted list/ bucket)
+- <mark>0220[H]</mark> Contains Duplicates III (+ sorted list / bucket)
 
 ### Binary Operations
 
