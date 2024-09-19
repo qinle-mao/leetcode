@@ -32,3 +32,6 @@ print(heap) # [1, 5, 3]
 heapq.heappop(heap)
 print(heap) # [3, 5]
 
+# math lib - gcd()
+import math
+print(math.gcd(104, 80)) # 8

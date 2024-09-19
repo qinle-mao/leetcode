@@ -18,6 +18,7 @@
 - <mark>0430[M]</mark> Flatten a Multilevel Doubly Linked List (DFS)
 - 0459[E] Repeated Substring Pattern
 - 0480[H] Sliding Window Median (binary search)
+- 0529[M] Fraction Addition and Subtraction (simulation)
 
 ### Graphs & Trees
 
@@ -31,6 +32,7 @@
 - **0218[H]** The Skyline Problem (max heap / segment tree)
 - 0199[M] Binary Tree Right Side View (level-order traversal)
 - 0437[M] Path Sum III (DFS + flag)
+- 0563[E] Binary Tree Tilt
 
 ### Sorting Algorithms
 
@@ -80,6 +82,7 @@
 - 0443[M] String Compression
 - **0455[E]** Assign Cookies
 - **0524[M]** Longest Word in Dictionary through Deleting
+- 0581[M] Shortest Unsorted Continuous Subarray (solution 2)
 
 ### Sliding Windows
 
