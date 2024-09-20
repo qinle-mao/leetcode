@@ -19,6 +19,8 @@
 - 0459[E] Repeated Substring Pattern
 - 0480[H] Sliding Window Median (binary search)
 - 0529[M] Fraction Addition and Subtraction (simulation)
+- 0564[H] Find the Closest Palindrome (simulation)
+- 0599[E] Minimum Index Sum of Two Lists
 
 ### Graphs & Trees
 
