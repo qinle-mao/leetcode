@@ -5,7 +5,6 @@
 - 0023[H] Merge K Sorted Lists
 - 0268[E] Missing Number
 - 0275[M] H-Index II (binary search)
-- 0150[M] Evaluate Reverse Polish Notation (stack)
 - 0162[M] Find Peak Element (binary search)
 - 0054[M] Spiral Matrix 
 - 0067[E] Add Binary
@@ -21,6 +20,12 @@
 - 0529[M] Fraction Addition and Subtraction (simulation)
 - 0564[H] Find the Closest Palindrome (simulation)
 - 0599[E] Minimum Index Sum of Two Lists
+- 0709[E] To Lower Case
+
+### Stacks & Queues
+
+- 0150[M] Evaluate Reverse Polish Notation (stack)
+- **0739[M]** Daily Temperatures (monotonic stack)
 
 ### Graphs & Trees
 
@@ -99,6 +104,7 @@
 - 0136[E] Single Number (exclusive or `^`)
 - 0461[E] Hamming Distance (exclusive or `^`)
 - 0278[E] First Bad Version
+- <mark>0672[M]</mark> Bulb Switcher II (exclusive or `^`)
 
 ### Math Problems
 
