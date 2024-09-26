@@ -21,11 +21,12 @@
 - 0564[H] Find the Closest Palindrome (simulation)
 - 0599[E] Minimum Index Sum of Two Lists
 - 0709[E] To Lower Case
+- 0722[M] Remove Comments (simulation)
 
 ### Stacks & Queues
 
 - 0150[M] Evaluate Reverse Polish Notation (stack)
-- **0739[M]** Daily Temperatures (monotonic stack)
+- <mark>0739[M]</mark> Daily Temperatures (monotonic stack)
 
 ### Graphs & Trees
 
@@ -40,6 +41,7 @@
 - 0199[M] Binary Tree Right Side View (level-order traversal)
 - 0437[M] Path Sum III (DFS + flag)
 - 0563[E] Binary Tree Tilt
+- 0654[M] Maximum Binary Tree
 
 ### Sorting Algorithms
 
