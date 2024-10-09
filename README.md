@@ -22,11 +22,16 @@
 - 0599[E] Minimum Index Sum of Two Lists
 - 0709[E] To Lower Case
 - 0722[M] Remove Comments (simulation)
+- **0659[M]** Split Array into Consecutive Subsequences (hash map, min heap)
+- 0682[E] Baseball Game (simulation)
+- 0609[M] Find Duplicate File in System (hash map)
+- **0822[M]** Card Flipping Game
 
 ### Stacks & Queues
 
 - 0150[M] Evaluate Reverse Polish Notation (stack)
 - <mark>0739[M]</mark> Daily Temperatures (monotonic stack)
+- 0735[M] Asteroid Collision (stack)
 
 ### Graphs & Trees
 
@@ -42,6 +47,7 @@
 - 0437[M] Path Sum III (DFS + flag)
 - 0563[E] Binary Tree Tilt
 - 0654[M] Maximum Binary Tree
+- ==0675[H]== Cut Off Trees for Golf Event (BFS / A*)
 
 ### Sorting Algorithms
 

@@ -95,7 +95,7 @@ class Solution(object):
                     break
                 process[tmp]['done'] = 1
                 for path in process[tmp]['path']:
-                        path.append(tmp)
+                    path.append(tmp)
                 for pos in graph[tmp]:
                     if process[pos]['done'] == 0:
                         currDist = process[pos]['dist']

@@ -22,7 +22,18 @@ print(reduce(lambda x, y : x * y, nums)) # 20 (1*2*3*4*5)
 print(list(map(lambda x : x ** 2, nums))) # [1, 4, 9, 16, 25]
 print(list(filter(lambda x : x % 2 == 0, nums))) # [2, 4]
 
-# minheap (maxheap not supported)
+# PriorityQueue - minheap (maxheap not supported)
+from queue import PriorityQueue
+heap = PriorityQueue()
+heap.put(3)
+heap.put(1)
+heap.put(4)
+heap.put(2)
+print(heap.get()) # 1
+print(heap.get()) # 2
+print(heap.get()) # 3
+print(heap.get()) # 4
+# heapq - minheap (maxheap not supported)
 import heapq
 heap = []
 heapq.heappush(heap, 5)
@@ -34,4 +45,7 @@ print(heap) # [3, 5]
 
 # math lib - gcd()
 import math
-print(math.gcd(104, 80)) # 8
+print(math.gcd(104, 80)) # greatest common divisor - 8
+
+# defaultdict
+from collections import defaultdict
